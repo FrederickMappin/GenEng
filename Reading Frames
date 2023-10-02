@@ -1,0 +1,12 @@
+string = "ATTAGGATTATTT"
+RF1 = []
+RF2 = []
+RF3 = []
+for i in range(0, len(string), 3):
+    RF1.append(string[i:i+3])
+for i in range(1, len(string), 3):
+    RF2.append(string[i:i+3])
+for i in range(2), len(string), 3):
+    RF3.append(string[i:i+3])
+
+print(RF1,RF2,RF3)
