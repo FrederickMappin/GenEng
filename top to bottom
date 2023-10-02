@@ -1,0 +1,15 @@
+#TOP to bottom STRING 
+string = "ATCG"
+
+key_map = {
+    'A':'T',
+    'T':'A', 
+    'C':'G',
+    'G':'C'
+}
+
+new_string = ""
+for char in string:
+    new_string += key_map[char]
+
+print(new_string)
