@@ -1,12 +1,38 @@
-string = "ATTAGGATTATTT"
-RF1 = []
-RF2 = []
-RF3 = []
-for i in range(0, len(string), 3):
-    RF1.append(string[i:i+3])
-for i in range(1, len(string), 3):
-    RF2.append(string[i:i+3])
-for i in range(2), len(string), 3):
-    RF3.append(string[i:i+3])
+def RFrame(string):
+    RF1 = []
+    RF2 = []
+    RF3 = []
+    RF4 = []
+    RF5 = []
+    RF6 = []
+    
+    reversed_dna = string[::-1]
+    
+    bottom_strand = ""
+   
+    key_map = {
+    'A':'T',
+    'T':'A', 
+    'C':'G',
+    'G':'C'
+    }
+    for char in reversed_dna:
+        bottom_strand += key_map[char]
+    print(bottom_strand)
+    
+    for i in range(0, len(string), 3):
+        RF1.append(string[i:i+3])
+    for i in range(1, len(string), 3):
+        RF2.append(string[i:i+3])
+    for i in range(2, len(string), 3):
+        RF3.append(string[i:i+3])
 
-print(RF1,RF2,RF3)
+    for i in range(0, len(string), 3):
+        RF4.append(string[i:i+3])
+    for i in range(1, len(string), 3):
+        RF5.append(string[i:i+3])
+    for i in range(2, len(string), 3):
+        RF6.append(string[i:i+3])
+    
+    
+    print("The six reading frames","\n",RF1 ,"\n",RF2,"\n",RF3 ,"\n",RF4,"\n",RF5 ,"\n",RF6)
