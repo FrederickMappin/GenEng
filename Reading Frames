@@ -1,3 +1,4 @@
+
 def RFrame(string):
     RF1 = []
     RF2 = []
@@ -27,12 +28,12 @@ def RFrame(string):
     for i in range(2, len(string), 3):
         RF3.append(string[i:i+3])
 
-    for i in range(0, len(string), 3):
-        RF4.append(string[i:i+3])
+    for i in range(0, len(bottom_strand), 3):
+        RF4.append(bottom_strand[i:i+3])
     for i in range(1, len(string), 3):
-        RF5.append(string[i:i+3])
+        RF5.append(bottom_strand[i:i+3])
     for i in range(2, len(string), 3):
-        RF6.append(string[i:i+3])
+        RF6.append(bottom_strand[i:i+3])
     
     
     print("The six reading frames","\n",RF1 ,"\n",RF2,"\n",RF3 ,"\n",RF4,"\n",RF5 ,"\n",RF6)
