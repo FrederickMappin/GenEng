@@ -1,0 +1,54 @@
+def Trl(RF_ALL):
+
+  codon_dict = {
+  'ATA':'Ile', 'ATC':'Ile', 'ATT':'Ile', 'ATG':'Met',
+  'ACA':'Thr', 'ACC':'Thr', 'ACG':'Thr', 'ACT':'Thr',
+  'AAC':'Asn', 'AAT':'Asn', 'AAA':'Lys', 'AAG':'Lys',
+  'AGC':'Ser', 'AGT':'Ser', 'AGA':'Arg', 'AGG':'Arg',
+  'CTA':'Leu', 'CTC':'Leu', 'CTG':'Leu', 'CTT':'Leu',
+  'CCA':'Pro', 'CCC':'Pro', 'CCG':'Pro', 'CCT':'Pro',
+  'CAC':'His', 'CAT':'His', 'CAA':'Gln', 'CAG':'Gln',
+  'CGA':'Arg', 'CGC':'Arg', 'CGG':'Arg', 'CGT':'Arg',
+  'GTA':'Val', 'GTC':'Val', 'GTG':'Val', 'GTT':'Val',
+  'GCA':'Ala', 'GCC':'Ala', 'GCG':'Ala', 'GCT':'Ala', 
+  'GAC':'Asp', 'GAT':'Asp', 'GAA':'Glu', 'GAG':'Glu',
+  'GGA':'Gly', 'GGC':'Gly', 'GGG':'Gly', 'GGT':'Gly',
+  'TCA':'Ser', 'TCC':'Ser', 'TCG':'Ser', 'TCT':'Ser',
+  'TTC':'Phe', 'TTT':'Phe', 'TTA':'Leu', 'TTG':'Leu',
+  'TAC':'Tyr', 'TAT':'Tyr', 'TAA':'***', 'TAG':'***', 'TGA':'***',
+  'TGC':'Cys', 'TGT':'Cys', 'TGG':'Trp'
+  }
+
+  RF1,RF2,RF3,RF4,RF5,RF6 = RF_ALL
+
+  aa_seq1 = []
+  for codons in RF1:
+    aa_seq1.append(codon_dict[codons])
+  print(aa_seq1)
+
+  aa_seq2 = []
+  for codons in RF2:
+    aa_seq2.append(codon_dict[codons])
+  print(aa_seq2)
+
+  aa_seq3 = []
+  for codons in RF3:
+    aa_seq3.append(codon_dict[codons])
+  print(aa_seq3)
+
+  aa_seq4 = []
+  for codons in RF4:
+    aa_seq4.append(codon_dict[codons])
+  print(aa_seq4)
+
+  aa_seq5 = []
+  for codons in RF5:
+    aa_seq5.append(codon_dict[codons])
+  print(aa_seq5)
+
+  aa_seq6 = []
+  for codons in RF6:
+    aa_seq6.append(codon_dict[codons])
+  print(aa_seq6)
+
+  return aa_seq1,aa_seq2,aa_seq3,aa_seq4,aa_seq5,aa_seq6
