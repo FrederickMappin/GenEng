@@ -20,7 +20,6 @@ def RFrame(string):
     }
     for char in reversed_dna:
         bottom_strand += key_map[char]
-  
     
     for i in range(0, len(string), 3):
         RF1.append(string[i:i+3])
@@ -35,4 +34,12 @@ def RFrame(string):
         RF5.append(bottom_strand[i:i+3])
     for i in range(2, len(string), 3):
         RF6.append(bottom_strand[i:i+3])
+    
+    RF1 = list(filter(lambda x: len(x) == 3, RF1))
+    RF2 = list(filter(lambda x: len(x) == 3, RF2))
+    RF3 = list(filter(lambda x: len(x) == 3, RF3))
+    RF4 = list(filter(lambda x: len(x) == 3, RF4))
+    RF5 = list(filter(lambda x: len(x) == 3, RF5))
+    RF6 = list(filter(lambda x: len(x) == 3, RF6))
+    
     return RF1, RF2, RF3, RF4, RF5, RF6
