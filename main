@@ -1,0 +1,25 @@
+
+
+string ="ATGAACGTCCAACCGACAAAATACCATGG"
+
+string = string.replace("\n", "")
+import RF 
+
+RF.RFrame(string)
+
+from RF import RFrame
+
+RF1, RF2, RF3, RF4, RF5, RF6 = RFrame(string)
+
+RF_ALL = RFrame(string)
+
+
+
+import Translation 
+
+from Translation import Trl
+
+
+protein = Trl(RF_ALL)
+
+
