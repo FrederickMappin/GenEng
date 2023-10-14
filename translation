@@ -1,0 +1,5 @@
+def Trs(string):
+
+  RNA = string.replace("T","U")
+
+  return RNA 
