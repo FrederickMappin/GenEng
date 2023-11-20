@@ -1,0 +1,42 @@
+string ="ATAGGAACGTCCGGGAACCGGGGACAAAATAGGCCATGG"
+
+string = string.replace("\n", "")
+
+#Finding PAM domains AGG,GGG,CGG,TGG
+print("AGG locations:", end=' ')
+loc = -1
+while True:
+    loc = string.find('AGG', loc+1)
+    if loc == -1:
+        break
+    print(loc, end=' ')
+
+print("\nTGG locations:", end=' ')
+loc = -1
+while True:
+    loc = string.find('TGG', loc+1)
+    if loc == -1:
+        break
+    print(loc, end=' ')
+
+print("\nGGG locations:", end=' ')
+loc = -1
+while True:
+    loc = string.find('GGG', loc+1)
+    if loc == -1:
+        break
+    print(loc, end=' ')
+
+print("\nCGG locations:", end=' ')
+loc = -1
+while True:
+    loc = string.find('CGG', loc+1)
+    if loc == -1:
+        print("\n") 
+        break
+    print(loc, end=' ')
+
+
+
+
+
