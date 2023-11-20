@@ -1,0 +1,16 @@
+string ="ATAGGAACGTCCGGGAACCGGGGACAAAATAGGCCATGG"
+
+string = string.replace("\n", "")
+
+motif = "CCGGG"
+#Finding motif
+print("motif locations:", end=' ')
+loc = -1
+
+# Loop through string to find location of motif, and print it out
+while True:
+    loc = string.find(motif,loc +1)
+    if loc == -1:
+        break
+    print(loc, loc+len(motif), " ", end =" ")
+print('')
