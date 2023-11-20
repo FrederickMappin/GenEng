@@ -1,0 +1,16 @@
+# This function finds the G/C concentration of a given string
+def G_C_conc(string):
+
+#Get the length of string, and the counts of G and C
+    Stringlength= len(string)
+
+    G_counts=string.count("G")
+
+    C_counts=string.count("C")
+
+# add G and C counts and deterime pecentage of C/G 
+    C_G_counts = G_counts + C_counts
+
+    G_C_conc = C_G_counts/Stringlength * 100
+
+    return G_C_conc
