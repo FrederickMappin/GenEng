@@ -1,0 +1,7 @@
+number = 2
+iterations = 20
+cycle = iterations - 1
+
+for i in range(cycle):
+  number = (number) * 2
+  print(number)
