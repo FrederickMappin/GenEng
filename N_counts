@@ -1,0 +1,16 @@
+string = "ATATGGGGGGAGC"
+
+def Ncount(string):
+    wA=string.count("A")
+
+    xT=string.count("T")
+
+    yG =string.count("G")
+
+    zC = string.count("C")
+
+    print("A:", wA)
+    print("T:", xT)
+    print("G:", yG)
+    print("C:", zC)
+    return
