@@ -1,0 +1,17 @@
+#Hamming distance 
+
+string1 = "ATATTATT"
+string2 = "ATATTTAT"
+hamming = ""
+
+for i in range(len(string1)):
+    if string1[i] == string2[i]:
+       hamming += string1[i]
+    else:
+        hamming += "*"
+print(hamming)
+print(string1)
+print(string2)
+
+hamming_number = hamming.count("*")
+print(hamming_number)
