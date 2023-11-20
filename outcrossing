@@ -1,0 +1,7 @@
+
+number = 100
+iterations = 7
+
+for i in range(iterations):
+  number = number / 2
+  print(number)
