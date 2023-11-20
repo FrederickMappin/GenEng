@@ -1,0 +1,17 @@
+string = "ATATAGC"
+
+wA=string.count("A")
+
+xT=string.count("T")
+
+yG =string.count("G")
+
+zC = string.count("C")
+
+if len(string)>= int(13):
+    Tm= 64.9 +41*(yG+zC-16.4)/(wA+xT+yG+zC)
+    print(Tm)
+
+elif len(string) <= int(13):
+   Tm = (wA+xT) * 2 + (yG+zC) * 4
+   print(Tm)
