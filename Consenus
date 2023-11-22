@@ -1,0 +1,27 @@
+seqs = [
+    "ATCCAGCT",
+    "GGGCAACT",
+    "ATGGATCT",
+    "AAGCAACC", 
+    "TTGGAAC"
+]
+
+seq_len = len(seqs[0])
+letter_counts = [[0] * 4 for _ in range(seq_len)] 
+
+for seq in seqs:
+    for i, letter in enumerate(seq):
+        if letter == 'A':
+            letter_counts[i][0] += 1 
+        elif letter == 'C':
+            letter_counts[i][1] += 1
+        elif letter == 'G':
+            letter_counts[i][2] += 1
+        else:
+            letter_counts[i][3] += 1
+            
+most_common = ""
+for counts in letter_counts:
+    most_common += "ACGT"[counts.index(max(counts))]
+
+print(most_common)
