@@ -1,0 +1,66 @@
+#Transition and Transversion calculations 
+
+string1 = "GCAACGCACAACGAAAACCCTTAGGGACTGGATTATTTCGTGATCGTTGTAGTTATTGGAAGTACGGGCATCAACCCAGTT"
+string2 = "TTATCTGACAAAGAAAGCCGTCAACGGCTGGATAATTTCGCGATCGTGCTGGTTACTGGCGGTACGAGTGTTCCTTTGGGT"
+hamming = ""
+
+for i in range(len(string1)):
+    if string1[i] == string2[i]:
+       hamming += string1[i]
+    else:
+        hamming += "*"
+print(hamming)
+print(string1)
+print(string2)
+position =[]
+loc = -1
+while True:
+    loc = hamming.find('*', loc+1)
+    position.append(loc)
+    if loc == -1:
+        break
+    print(loc, end='')
+print("\n")
+
+
+position.pop()
+
+# Calculate Transversions 
+tranv = int()
+for i in position:
+    if string1[i] == "A" and string2[i] =="T":
+        tranv += 1 
+    elif string1[i] == "A" and string2[i] =="C":
+        tranv += 1 
+   
+    elif string1[i] == "C" and string2[i] =="A":
+        tranv += 1 
+   
+    elif string1[i] == "C" and string2[i] =="G":
+        tranv += 1 
+    elif string1[i] == "T" and string2[i] =="G":
+        tranv += 1 
+
+    elif string1[i] == "T" and string2[i] =="A":
+        tranv += 1 
+    elif string1[i] == "G" and string2[i] =="C":
+        tranv += 1 
+    elif string1[i] == "G" and string2[i] =="T":
+        tranv += 1 
+    
+#Calcuate Transitions
+trans =int()
+
+for i in position:
+    if string1[i] == "A" and string2[i] =="G":
+        trans += 1 
+    elif string1[i] == "G" and string2[i] =="A":
+        trans += 1 
+   
+    elif string1[i] == "C" and string2[i] =="T":
+        trans += 1 
+   
+    elif string1[i] == "T" and string2[i] =="C":
+        trans += 1 
+
+print(trans/tranv)
