@@ -1,0 +1,16 @@
+data = {}
+current_key = None
+
+#fastafile =input("provide a fasta file directory ")
+#fastafile = fastafile.strip()
+
+with open( "/Users/freddymappin/Desktop/file.txt" ) as f:
+    for line in f:
+        if line.startswith('>'):
+            current_key = line.strip('>\n ')
+            data[current_key] = ''
+        else:
+            data[current_key] += line.strip()
+            
+print(data)
+print(current_key)
