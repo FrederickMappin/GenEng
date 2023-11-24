@@ -1,0 +1,15 @@
+#Finds longest substring between two strings
+def find_longest_shared_substring(str1, str2):
+    substr = ""
+    if len(str1) > len(str2):
+        str1, str2 = str2, str1
+    for i in range(len(str1)):
+        for j in range(len(str1)-i+1):
+            if j > len(substr) and str1[i:i+j] in str2:
+                substr = str1[i:i+j]
+    return substr
+
+str1 = "GATTACAATATATATCCCCCC" 
+str2 = "TAGACCATATATATCCCCC"
+
+print(find_longest_shared_substring(str1, str2))
