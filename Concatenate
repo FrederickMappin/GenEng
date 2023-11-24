@@ -1,0 +1,13 @@
+#Concatenate to strings  of DNA
+def cat_(string1,string2):
+    conc = string1 + string2 
+    return conc
+
+
+
+string1= "ATATATATAT"
+string2="GGGGCCCAAVVVGG"
+
+x = cat_(string1,string2)
+
+print(x)
