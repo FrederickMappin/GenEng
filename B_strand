@@ -1,16 +1,21 @@
-stringk = "ATCGATACGA"
+string1 = "ATCGATACGA"
 
-new_string = ""
-for char in string:
-    if char == 'A':
-        new_string += 'T'
-    elif char == 'T':
-        new_string += 'A'
-    elif char == 'C':
-        new_string += 'G' 
-    elif char == 'G':
-        new_string += 'C'
-    else:
-        new_string += char
+
+def B_strand(string1):
+    new_string = ""
+    for char in string1:
+        if char == 'A':
+            new_string += 'T'
+        elif char == 'T':
+            new_string += 'A'
+        elif char == 'C':
+            new_string += 'G' 
+        elif char == 'G':
+            new_string += 'C'
+        else:
+            new_string += char
+    
+    return new_string
         
+new_string = B_strand(string1)
 print(new_string)
