@@ -19,3 +19,4 @@ def B_strand(string1):
         
 new_string = B_strand(string1)
 print(new_string)
+print(done)
