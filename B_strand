@@ -1,4 +1,4 @@
-string = "ATCGATACGA"
+string  = "ATCGATACGA"
 
 new_string = ""
 for char in string:
