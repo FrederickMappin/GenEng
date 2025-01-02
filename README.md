@@ -4,5 +4,5 @@ This repository provides a flexible, code for  manipulating DNA sequences progra
 
 
 # Mutant Maker
-Program to allow for changing amino acids at a location, great of iterative protein design.
+Program to allow for changing amino acids at a location, great for iterative protein design.
 <img width="796" alt="Screenshot 2025-01-02 at 12 05 52 AM" src="https://github.com/user-attachments/assets/a22a8d63-ba3f-4e78-93e1-831e2e237539" />
